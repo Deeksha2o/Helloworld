@@ -1,0 +1,13 @@
+name: resuable_worflow
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+# Call reusable WF
+# trigger
+jobs:
+  reusable-wokflow_main:
+    uses: Learning-dks/play-area/.github/workflows/learn.yml@main
+    secrets : inherit
