@@ -1,0 +1,19 @@
+name: Component cd pipeline
+
+# Controls when the WF will run
+on: 
+  workflow_call:
+  workflow_dispatch:
+  push:
+   branches:
+   - main
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List workflow runs
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.authentication }}
+          event-type: list_workflow_runs
+          repository:  Deeksha2o/Helloworld 
