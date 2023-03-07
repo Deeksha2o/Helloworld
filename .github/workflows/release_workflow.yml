@@ -20,4 +20,4 @@ jobs:
           https://api.github.com/repos/Deeksha2o/Helloworld/commits/9dfa07d2a84a9226720006a220d6d8aa96154563/check-runs  
          | jq "[.check_runs[] | select (.name == \"example_job\") ]  | .[0].id" \
          )
-         echo ${{GH_WORKFLOW_STATE}}
+         echo ${GH_WORKFLOW_STATE}
