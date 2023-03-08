@@ -12,6 +12,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: List workflow runs
+        shell: powershell
         run: |
           Invoke-RestMethod -Method GET -Uri https://api.github.com/repos/Deeksha2o/Helloworld/commits/9dfa07d2a84a9226720006a220d6d8aa96154563/check-runs
            "Authorization: Bearer ${{ secrets.REPO_SECRET }}"
