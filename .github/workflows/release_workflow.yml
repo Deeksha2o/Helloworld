@@ -9,7 +9,7 @@ on:
    - main
 jobs:
   example_job:
-    runs-on: windows
+    runs-on: windows-latest
     steps:
       - name: List workflow runs
         run: |
