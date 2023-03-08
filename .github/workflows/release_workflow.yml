@@ -14,4 +14,4 @@ jobs:
       - name: List workflow runs
         run: |
           Invoke-RestMethod -Method GET -Uri https://api.github.com/repos/Deeksha2o/Helloworld/commits/9dfa07d2a84a9226720006a220d6d8aa96154563/check-runs
-           "Authorization: Bearer ${{ secrets.REPO_SECRET }}" "X-GitHub-Api-Version: 2022-11-28" 
+           "Authorization: Bearer ${{ secrets.REPO_SECRET }}"
